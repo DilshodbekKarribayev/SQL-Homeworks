@@ -50,9 +50,8 @@
 
 --4
 							-------------------------------------
-with cte as (
-select mname,count(mname) over (partition by mname order by (select null))as mnamecount from Movie where Roles = 'Actor' and (AName = 'Amitabh 'or AName = 'Vinod')
-) select * from cte 
-
+--with cte as (
+--select *,count(mname) over (partition by mname order by (select null))as mnamecount from Movie where Roles = 'Actor' and (AName = 'Amitabh 'or AName = 'Vinod')
+--) select * from cte  where mnamecount >1
 
 
